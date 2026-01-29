@@ -1,16 +1,66 @@
-## Hi there 👋
+# 🛣️ 美国之旅回忆录 | American Journey Memoirs
 
-<!--
-**jackie-xu-xx/jackie-xu-xx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+*致敬约翰·斯坦贝克《横越美国》的个人旅行记录*
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=4F8BF9&center=true&vCenter=true&multiline=true&width=435&lines=穿越美洲大陆的沉思;Journey+through+the+American+Continent;In+the+footsteps+of+John+Steinbeck)]
+
+</div>
+
+---
+
+## 📖 项目简介
+
+这是一个记录多次横穿美国经历的个人写作项目，灵感源自约翰·斯坦贝克的《横越美国》。每一段旅程都是一次心灵的探索，每一里路都承载着独特的体验。
+
+> *"真正的发现之旅不在于寻找新的风景，而在于拥有新的眼光。"*  
+> —— 马塞尔·普鲁斯特
+
+## 🗺️ 内容预览
+
+- 🚗 **横穿路线** - 多次横穿美国的不同路线与体验
+- 👥 **旅途见闻** - 途中遇到的有趣人物与故事  
+- 🏞️ **自然之美** - 从大西洋到太平洋的地理变迁
+- 🏙️ **城乡对比** - 不同规模社区的文化差异
+- 🧭 **人生感悟** - 旅行带来的思考与成长
+
+## 🔒 隐私说明
+
+⚠️ **注意**: 本仓库为私密项目，包含个人经历与反思。部分内容可能涉及隐私信息，仅供作者记录与创作使用。
+
+## ✍️ 写作进度
+
+<!-- TODO: 动态进度 -->
+- **已完成**: 章节大纲规划
+- **进行中**: 首章草稿撰写
+- **目标**: 持续更新
+
+## 🛠️ 项目技术
+
+- **写作语言**: Markdown
+- **版本控制**: Git + GitHub
+- **任务管理**: GitHub Issues
+- **同步备份**: 自动推送
+
+## 📊 当前状态
+
+```
+ ████████████████████████████████░░ 95% 
+```
+
+## © 版权声明
+
+本项目包含作者原创内容，仅供个人使用。引用需征得同意。
+
+---
+
+<div align="center">
+
+*在路上，我们发现的不仅是风景，更是自己。*
+
+**🚀 项目持续更新中... 🚀**
+
+</div>
