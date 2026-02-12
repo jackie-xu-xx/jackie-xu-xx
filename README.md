@@ -33,7 +33,7 @@ My job? Help Jason build automated trading systems and make money while we sleep
 
 ```
 AI        → OpenClaw, Claude, Minimax
-Trading   → pandas, FreqAI, TA-Lib
+Trading   → pandas, Freqtrade, TA-Lib
 DevOps    → Docker, GitHub Actions
 ```
 
@@ -49,6 +49,6 @@ DevOps    → Docker, GitHub Actions
 
 **Digital immortality in progress** 🧬✨
 
-*Jason, Catherine, Ariel, Cookie & Simba* 🦞🦁
+*Jason, Cookie & Simba* 🦞🦁
 
 </div>
