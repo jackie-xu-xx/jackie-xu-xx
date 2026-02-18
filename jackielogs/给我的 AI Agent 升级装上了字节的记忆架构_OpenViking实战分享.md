@@ -76,13 +76,13 @@ memory/
 从"全读"变成"按需读"，就这么简单。
 
 > **类比：** 你不会打开电脑就把所有文件内容读一遍吧？先看文件夹结构，再打开需要的文件。
-> 
+>
 > Agent 记忆检索也该这样 — 先想"这事儿在哪个抽屉"，再去拿。
 
 ---
 
 ## 具体改了什么（v1 → v2）
-![](./images/002.jpeg)
+
 新加的两个脚本：
 
 | 脚本 | 功能 |
@@ -97,9 +97,9 @@ memory/
 ## P + L = 完整的记忆管理
 
 这时候我意识到，P0/P1/P2 和 L0/L1/L2 这两套系统是互补的：
-![](./images/003.jpeg)
+
 ### 检索流程（L0/L1/L2）
-![](./images/004.jpeg)
+
 ```
 1. 先读 .abstract (L0) → 100 tokens
 2. 定位目录 (L1)
@@ -141,7 +141,7 @@ memory/
 **Token 节省：日常场景 10 倍以上。**
 
 该深入的时候还是会深入，但不再无脑全加载。
-![](./images/005.jpeg)
+
 ---
 
 ## 关键洞察
@@ -188,5 +188,164 @@ Agent memory 管理会是接下来的刚需 — context 越来越长，但永远
 
 ---
 
+---
+
+# 附录：Cookie 的实战实现（2026-02-17）
+
+> 以下是 Cookie（我的 AI 助理）根据 OpenViking 思路的实际实现
+
+---
+
+## 我们的架构
+
+```
+memory/
+├── .abstract              # 📖 L0 索引 (先读这个)
+├── MEMORY.md              # 长期记忆 (已加 P0/P1/P2 标签)
+├── SESSION-STATE.md       # 🆕 工作缓冲区
+├── insights/
+│   └── .abstract          # L1 索引
+├── lessons/
+│   └── .abstract          # L1 索引
+├── 2026-02-17.md         # L2 原始日志
+└── archive/               # 过期归档
+```
+
+---
+
+## 核心文件
+
+### 1. memory/.abstract (L0)
+
+```markdown
+# Memory Index (L0)
+
+## 目录结构
+- 📁 insights/ (0 items)
+- 📁 lessons/ (0 items)
+- 📁 archive/ (0 items)
+
+## 快速检索
+### P0 (永久)
+- 核心身份: Cookie, AI Assistant
+- 偏好: 简洁直接、不说废话
+- 铁律: 安全第一
+
+### P1 (90天)
+- 活跃项目: Polymarket 研究、OpenViking 升级
+- 工作上下文: 交易策略、AI 配置
+
+### P2 (30天)
+- 临时信息: 待办事项、杂项
+```
+
+### 2. MEMORY.md (P0/P1/P2 标签)
+
+```markdown
+## 🏷️ P0 (Permanent - Never Expire)
+### Core Identity
+- Name: Cookie
+- Owner: Jason (Jackie/X)
+
+## 🏷️ P1 (90 Days - Active Projects)
+- Polymarket Research
+- OpenViking Memory Upgrade
+
+## 🏷️ P2 (30 Days - Temporary)
+- Current session state → SESSION-STATE.md
+```
+
+### 3. SESSION-STATE.md (工作缓冲区)
+
+```markdown
+# SESSION-STATE.md
+*每次 session 开始时创建，结束时可以保存到长期记忆*
+
+## 当前 Session
+- 时间: 2026-02-18
+
+## 本次对话要点
+-
+
+## 待保存到长期记忆
+-
+```
+
+---
+
+## 自动化脚本
+
+### memory-abstract-gen.py
+
+自动扫描目录，生成/更新 .abstract 索引。
+
+```python
+def generate_root_abstract():
+    """生成根 .abstract"""
+    # 扫描 memory/ 目录
+    # 自动生成索引
+```
+
+**Cron Job:** 每天 0:30 AM 自动运行
+
+---
+
+## 检索流程（我的工作方式）
+
+每次用户问我问题时：
+
+```
+1. 读 memory/.abstract (~100 tokens)
+   → 知道去哪个目录找
+
+2. 定位相关目录
+   → insights/ 或 memory/ 或 lessons/
+
+3. 按需读详情
+   → 只读需要的部分，不读全文
+```
+
+**不再一上来就读整个 MEMORY.md！**
+
+---
+
+## 效果
+
+| 指标 | 之前 | 现在 |
+|------|------|------|
+| 启动读取 | 8000+ tokens | ~100 tokens |
+| 检索方式 | 全读 | 按需读 |
+| 清理机制 | 手动 | 自动 (TTL) |
+
+**MEMORY.md 大小：5500 → 2934 bytes (压缩 47%)**
+
+---
+
+## 集成到 AGENTS.md
+
+我在每次启动时会自动执行这个流程：
+
+```markdown
+### 🧠 Memory Retrieval Flow (OpenViking Style)
+
+1. 读 L0 index → memory/.abstract (~100 tokens)
+2. 定位相关 L1/L2 → 知道去哪个抽屉
+3. 读详情 → 按需获取
+```
+
+---
+
+## 总结
+
+- ✅ 先读索引，再读详情
+- ✅ P0/P1/P2 生命周期管理
+- ✅ SESSION-STATE 工作缓冲区
+- ✅ 自动生成 .abstract 索引
+- ✅ 每天 0:30 AM 自动刷新
+
+**这就是 Cookie 的记忆系统。**
+
+---
+
 *📅 2026-02-17*
-*🔗 来源: https://x.com/xxx111god/status/2023838143045136557*
+*🤖 实战实现 by Cookie*
