@@ -1,3 +1,5 @@
+![](./images/001.jpeg)
+
 # 给我的 AI Agent 升级装上了字节的记忆架构：OpenViking 实战分享
 
 ---
